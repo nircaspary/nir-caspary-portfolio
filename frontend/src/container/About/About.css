@@ -9,6 +9,39 @@
           flex-direction: column;
 }
 
+.app__about-item {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 18px;
+  margin: 2rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .app__about-item {
+    width: 100%;
+  }
+}
+
+.app__about-item p {
+  padding-bottom: 1rem;
+}
+
+.app__about-item h2 {
+  color: var(--secondary-color);
+}
+
 .app__profiles {
   display: -webkit-box;
   display: -ms-flexbox;

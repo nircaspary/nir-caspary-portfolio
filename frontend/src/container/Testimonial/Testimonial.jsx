@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-
+import { Modal, PdfFile } from '../../components';
+import useModal from '../../hooks/useModal';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client, urlFor } from '../../client';
 import './Testimonial.scss';
 
 const Testimonial = () => {
+  const { isShowing, toggle } = useModal();
   const [brands, setBrands] = useState([]);
   const [testimonials, setTestimonials] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,20 +26,30 @@ const Testimonial = () => {
 
   return (
     <>
+      <h2 className='head-text' style={{ paddingBottom: '48px' }}>
+        Testimonials
+      </h2>
       {testimonials.length && (
         <>
-          {console.log(testimonials)}
-          <div className='app__testimonial-item app__flex'>
+          <div className='app__testimonial-item'>
             <img src={urlFor(test.imgurl)} alt={testimonials} />
-            <div className='app__testimonial-content'>
-              <p className='p-text'>{test.feedback}</p>
+            <div className='app__testimonial-content' style={{ alignItems: 'center' }}>
+              <motion.div
+                whileInView={{ opacity: 1 }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.5, type: 'tween' }}>
+                <h4 style={{ padding: '10px', margin: '0', cursor: 'pointer' }} onClick={toggle}>
+                  Read Testimonial
+                </h4>
+              </motion.div>
+              <iframe title={test.feedback} src={test.feedback} width='80%' height='400px' />
               <div>
                 <h4 className='bold-text'>{test.name}</h4>
                 <h5 className='p-text'>{test.company}</h5>
               </div>
             </div>
           </div>
-
+          <Modal isShowing={isShowing} hide={toggle} content={<PdfFile file={test.feedback} />} />
           <div className='app__testimonial-btns app__flex'>
             <div
               className='app__flex'

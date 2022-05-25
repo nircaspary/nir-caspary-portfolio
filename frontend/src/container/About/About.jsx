@@ -14,14 +14,33 @@ const About = () => {
   return (
     <>
       <h2 className='head-text'>
-        I Know That
-        <span> Good Dev </span>
+        Hello, I am
+        <span> Nir Caspary </span>
         <br />
-        means
-        <span> Good Business</span>
+        And i'm a<span> Web Developer</span>
       </h2>
       <div className='app__profiles'>
-        {abouts.map((about, i) => (
+        <motion.div
+          whileInView={{ opacity: 1 }}
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.5, type: 'tween' }}
+          className='app__about-item'>
+          <p>
+            I’m a Fullstack Developer located in Zichron Yaakov. I have a serious passion for Creating Things, Solving
+            Problems, and creating intuitive, dynamic user experiences.
+          </p>
+          <p>Well-organised person, problem solver, independent learner with high attention to detail.</p>
+          <p>
+            Fan of outdoor activities, TV series, Gym and Lerning New Things. A friendly person who loves to make new
+            connections, Interested in the entire web development spectrum and working on ambitious projects with
+            positive people.
+          </p>
+          <h2> Lets work together !</h2>
+        </motion.div>
+
+        {
+          //! For Sanity.io data fetch option
+          /* {abouts.map((about, i) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
@@ -36,7 +55,8 @@ const About = () => {
               {about.description}
             </p>
           </motion.div>
-        ))}
+        ))} */
+        }
       </div>
     </>
   );

@@ -15,6 +15,7 @@
       width: 100%;
       flex-direction: column;
     }
+    
   }
   
   .app__skills-list {
@@ -34,9 +35,10 @@
   }
   
   .app__skills-item {
+    
     flex-direction: column;
     text-align: center;
-  
+    
     margin: 1rem;
   
     transition: all 0.3s ease-in-out;
@@ -88,9 +90,11 @@
     align-items: flex-start;
     flex-direction: column;
   
+    
     @media screen and (max-width: 900px) {
       margin-top: 2rem;
     }
+    
   }
   
   .app__skills-exp-item {
@@ -100,16 +104,22 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin: 1rem 0;
+    @media screen and (max-width: 1300px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+    }
+   
   }
   
   .app__skills-exp-works {
     flex: 1;
-  
     .app__skills-exp-work {
+      
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
+     
       margin-bottom: 1rem;
       cursor: pointer;
   
@@ -126,9 +136,9 @@
   }
   
   .app__skills-exp-year {
-    margin-right: 3rem;
-  
+    
     p {
+      width:200px;
       font-weight: 800;
       color: var(--secondary-color);
     }

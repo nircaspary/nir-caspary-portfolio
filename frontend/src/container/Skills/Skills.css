@@ -160,6 +160,19 @@
   margin: 1rem 0;
 }
 
+@media screen and (max-width: 1300px) {
+  .app__skills-exp-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
 .app__skills-exp-works {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -174,12 +187,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   margin-bottom: 1rem;
   cursor: pointer;
 }
@@ -194,11 +201,8 @@
   margin-top: 5px;
 }
 
-.app__skills-exp-year {
-  margin-right: 3rem;
-}
-
 .app__skills-exp-year p {
+  width: 200px;
   font-weight: 800;
   color: var(--secondary-color);
 }

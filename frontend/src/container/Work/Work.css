@@ -72,11 +72,12 @@
 }
 
 .app__work-portfolio .app__work-item {
-  width: 270px;
+  width: 275px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 420px;
   margin: 2rem;
   padding: 1rem;
   border-radius: 0.5rem;

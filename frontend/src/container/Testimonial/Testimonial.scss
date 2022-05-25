@@ -9,18 +9,17 @@
     min-height: 320px;
     background-color: var(--white-color);
     display: flex;
-    flex-direction: row;
+    align-items:center;
+
+    flex-direction: column;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   
     transition: all 0.3s ease-in-out;
-  
     img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
       object-fit: cover;
+      padding-bottom: 1rem;
     }
   
     @media screen and (min-width: 2000px) {
@@ -81,7 +80,7 @@
       padding: 0;
     }
   }
-  
+
   .app__testimonial-btns {
     flex-direction: row;
     margin-top: 1rem;
