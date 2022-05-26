@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client, urlFor } from '../../client';
-import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+import { AiFillEye, AiFillGithub, AiOutlineDownload } from 'react-icons/ai';
 import './Work.scss';
 
 const Work = () => {
@@ -85,6 +85,19 @@ const Work = () => {
               <p className='p-text' style={{ marginTop: 10 }}>
                 {work.description}
               </p>
+              {work.instructions && (
+                <motion.div
+                  whileInView={{ opacity: 1 }}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.5, type: 'tween' }}>
+                  <a
+                    href={work.instructions}
+                    download
+                    style={{ marginTop: 10, textDecoration: 'none', fontSize: '14px' }}>
+                    Download Project Instructions <AiOutlineDownload />
+                  </a>
+                </motion.div>
+              )}
               <div className='app__work-tag app__flex'>
                 <p className='p-text'>{work.tags[0]} </p>
               </div>

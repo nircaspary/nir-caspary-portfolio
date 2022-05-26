@@ -18,7 +18,7 @@ const PdfFile = ({ file }) => {
     <div>
       {renderDownloadFile()}
       <Document file={file} onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} />
+        <Page pageNumber={pageNumber} style={{ width: '100px' }} />
       </Document>
       <p className='app__flex bold-text p-text'>
         Page {pageNumber} of {numPages}

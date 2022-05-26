@@ -83,7 +83,6 @@
   border-radius: 0.5rem;
   background-color: #fff;
   color: #000;
-  cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
