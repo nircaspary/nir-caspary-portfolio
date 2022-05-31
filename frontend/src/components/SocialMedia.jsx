@@ -9,7 +9,7 @@ const SocialMedia = () => {
 
   return (
     <>
-      <div className='app__social'>
+      <div className='app__social' style={{ cursor: 'pointer' }}>
         <div onClick={toggle}>
           <BsFillFileEarmarkPdfFill />
         </div>
