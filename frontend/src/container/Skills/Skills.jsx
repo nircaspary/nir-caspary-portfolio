@@ -43,7 +43,7 @@ const Skills = () => {
               </div>
               <motion.div className='app__skills-exp-works'>
                 {experience.works.map(work => (
-                  <>
+                  <React.Fragment key={work.name}>
                     <motion.div
                       key={work.name}
                       className='app__skills-exp-work'
@@ -59,7 +59,7 @@ const Skills = () => {
                         {work.desc}
                       </ReactTooltip>
                     )}
-                  </>
+                  </React.Fragment>
                 ))}
               </motion.div>
             </motion.div>

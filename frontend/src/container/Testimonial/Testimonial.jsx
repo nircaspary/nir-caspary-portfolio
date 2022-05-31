@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import { isBrowser } from 'react-device-detect';
 import { Modal, PdfFile } from '../../components';
 import useModal from '../../hooks/useModal';
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -43,18 +44,11 @@ const Testimonial = () => {
                 </h4>
               </motion.div>
 
-              <object
-                data={test.feedback}
-                src={test.feedback}
-                title={test.name}
-                type='application/pdf'
-                width='80%'
-                height='400px'>
-                <p>
-                  Your web browser doesn't have a PDF plugin. Instead you can
-                  <a href={test.feedback}>click here to download the PDF file.</a>
-                </p>
-              </object>
+              {isBrowser ? (
+                <iframe src={test.feedback} title={test.name} type='application/pdf' width='80%' height='400px' />
+              ) : (
+                <img src={urlFor(test.feedbackMobile)} alt={test.name} width='80%' height='400px' />
+              )}
               <div>
                 <h4 className='bold-text'>{test.name}</h4>
                 <h5 className='p-text'>{test.company}</h5>
