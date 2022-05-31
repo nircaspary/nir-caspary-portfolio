@@ -25,11 +25,7 @@ const SocialMedia = () => {
           </div>
         </a>
       </div>
-      <Modal
-        isShowing={isShowing}
-        hide={toggle}
-        content={<PdfFile file='https://drive.google.com/file/d/1e9phjSjB9hZEcuy-QifQxpiqV19XFloe/view?usp=sharing' />}
-      />
+      <Modal isShowing={isShowing} hide={toggle} content={<PdfFile file='/nir-caspary-cv1.pdf' />} />
     </>
   );
 };
