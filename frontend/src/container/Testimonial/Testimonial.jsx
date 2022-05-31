@@ -39,11 +39,22 @@ const Testimonial = () => {
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.5, type: 'tween' }}>
                 <h4 style={{ padding: '10px', margin: '0', cursor: 'pointer' }} onClick={toggle}>
-                  Read Testimonial
+                  Click here to read the testimonial
                 </h4>
               </motion.div>
 
-              <embed title={test.name} src={test.feedback} width='80%' height='400px' />
+              <object
+                data={test.feedback}
+                src={test.feedback}
+                title={test.name}
+                type='application/pdf'
+                width='80%'
+                height='400px'>
+                <p>
+                  Your web browser doesn't have a PDF plugin. Instead you can
+                  <a href={test.feedback}>click here to download the PDF file.</a>
+                </p>
+              </object>
               <div>
                 <h4 className='bold-text'>{test.name}</h4>
                 <h5 className='p-text'>{test.company}</h5>
