@@ -39,7 +39,11 @@
       flex-direction: column;
     }
   }
-  
+  .app__testimonial-feedback-mobile{
+    border: solid 1px black;
+    padding: 10px;
+    border-radius:10px;
+  }
   .app__testimonial-content {
     flex: 1;
     height: 100%;

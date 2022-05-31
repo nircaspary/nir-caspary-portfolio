@@ -47,7 +47,14 @@ const Testimonial = () => {
               {isBrowser ? (
                 <iframe src={test.feedback} title={test.name} type='application/pdf' width='80%' height='400px' />
               ) : (
-                <img src={urlFor(test.feedbackMobile)} alt={test.name} width='80%' height='400px' />
+                <img
+                  onClick={toggle}
+                  src={urlFor(test.feedbackMobile)}
+                  alt={test.name}
+                  width='80%'
+                  height='400px'
+                  className='app__testimonial-feedback-mobile'
+                />
               )}
               <div>
                 <h4 className='bold-text'>{test.name}</h4>
