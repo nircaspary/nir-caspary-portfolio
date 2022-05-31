@@ -34,12 +34,8 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
-import NirCasparyCV1 from '../assets/nir-caspary-cv1.pdf';
-import Testimonial1 from '../assets/testimonial-david-yachin-hackeru.pdf';
 
 export default {
-  Testimonial1,
-  NirCasparyCV1,
   email,
   mobile,
   api,

@@ -8,10 +8,7 @@ const scaleVariants = {
   whileInView: {
     scale: [0, 1],
     opacity: [0, 1],
-    transition: {
-      duration: 1,
-      ease: 'easeInOut',
-    },
+    transition: { duration: 1, ease: 'easeInOut' },
   },
 };
 
@@ -32,9 +29,7 @@ const Header = () => {
           </div>
 
           <div className='tag-cmp app__flex'>
-            <p className='p-text'>Fullstack Web Developer</p>
-            <p className='p-text'>Frontend Developer</p>
-            <p className='p-text'>Node JS Developer</p>
+            <p className='p-text'>Full stack Web Developer</p>
           </div>
         </div>
       </motion.div>

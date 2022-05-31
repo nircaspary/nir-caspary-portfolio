@@ -6,6 +6,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 const PdfFile = ({ file }) => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
+  const width = window.innerWidth;
+
   const renderDownloadFile = () => (
     <a href={file} download className='app__flex'>
       Click to download the file
@@ -18,7 +20,7 @@ const PdfFile = ({ file }) => {
     <div>
       {renderDownloadFile()}
       <Document file={file} onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} style={{ width: '100px' }} />
+        <Page pageNumber={pageNumber} width={width < 700 && width - 50} />
       </Document>
       <p className='app__flex bold-text p-text'>
         Page {pageNumber} of {numPages}

@@ -42,7 +42,8 @@ const Testimonial = () => {
                   Read Testimonial
                 </h4>
               </motion.div>
-              <iframe title={test.feedback} src={test.feedback} width='80%' height='400px' />
+
+              <iframe title={test.name} src={test.feedback} width='80%' height='400px' />
               <div>
                 <h4 className='bold-text'>{test.name}</h4>
                 <h5 className='p-text'>{test.company}</h5>

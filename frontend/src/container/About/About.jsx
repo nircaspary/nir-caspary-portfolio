@@ -17,7 +17,7 @@ const About = () => {
         Hello, I am
         <span> Nir Caspary </span>
         <br />
-        And i'm a<span> Web Developer</span>
+        And i'm a<span> Full stack Web Developer</span>
       </h2>
       <div className='app__profiles'>
         <motion.div
@@ -26,12 +26,12 @@ const About = () => {
           transition={{ duration: 0.5, type: 'tween' }}
           className='app__about-item'>
           <p>
-            I’m a Fullstack Developer located in Zichron Yaakov. I have a serious passion for Creating Things, Solving
-            Problems, and creating intuitive, dynamic user experiences.
+            I’m a Full stack web developer located in Zichron Yaakov. I have a strong passion for creating things,
+            solving problems, and creating intuitive, dynamic user experiences.
           </p>
           <p>Well-organised person, problem solver, independent learner with high attention to detail.</p>
           <p>
-            Fan of outdoor activities, TV series, Gym and Lerning New Things. A friendly person who loves to make new
+            Fan of outdoor activities, TV series, Gym and lerning new things. A friendly person who loves to make new
             connections, Interested in the entire web development spectrum and working on ambitious projects with
             positive people.
           </p>
